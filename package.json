@@ -1,0 +1,20 @@
+{
+  "name": "expo-phone-preview",
+  "version": "0.1.0",
+  "description": "A tiny browser phone frame for previewing Expo Web apps from localhost.",
+  "type": "module",
+  "main": "server.cjs",
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "expo",
+    "react-native",
+    "preview",
+    "phone",
+    "localhost"
+  ],
+  "author": "danicasellas",
+  "license": "MIT"
+}

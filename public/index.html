@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expo Phone Preview</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel" aria-label="Preview controls">
+        <div>
+          <p class="eyebrow">Expo preview</p>
+          <h1>Phone Preview</h1>
+        </div>
+
+        <form class="url-form" id="preview-form">
+          <label for="preview-url">Expo web URL</label>
+          <div class="url-row">
+            <input
+              id="preview-url"
+              name="preview-url"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="› Web: http://localhost:8081"
+            />
+            <button type="submit">Open</button>
+          </div>
+        </form>
+
+        <div class="devices" role="group" aria-label="Device size">
+          <button type="button" class="device-button is-active" data-device="iphone">
+            iPhone
+          </button>
+          <button type="button" class="device-button" data-device="android">
+            Android
+          </button>
+          <button type="button" class="device-button" data-device="tablet">
+            Tablet
+          </button>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="reload-preview">Reload</button>
+          <a id="open-target" href="http://localhost:8081/" target="_blank" rel="noreferrer">
+            Open tab
+          </a>
+        </div>
+
+        <p class="status" id="preview-status">Showing http://localhost:8081/</p>
+      </section>
+
+      <section class="stage" aria-label="Phone preview">
+        <div class="phone" id="phone-frame" data-device="iphone">
+          <div class="phone-speaker" aria-hidden="true"></div>
+          <iframe
+            id="preview-frame"
+            title="Expo app preview"
+            src="http://localhost:8081/"
+            allow="clipboard-read; clipboard-write"
+          ></iframe>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>
