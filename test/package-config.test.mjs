@@ -9,8 +9,11 @@ describe("desktop package config", () => {
     assert.equal(packageJson.main, "electron/main.cjs");
     assert.equal(packageJson.scripts.desktop, "electron .");
     assert.equal(packageJson.scripts["dist:win"], "electron-builder --win --dir");
-    assert.equal(packageJson.scripts["dist:win:installer"], "electron-builder --win");
-    assert.equal(packageJson.scripts["dist:mac"], "electron-builder --mac");
+    assert.equal(
+      packageJson.scripts["dist:win:installer"],
+      "electron-builder --win --publish never"
+    );
+    assert.equal(packageJson.scripts["dist:mac"], "electron-builder --mac --publish never");
   });
 
   it("packages the static preview and Electron shell for Windows and macOS", () => {

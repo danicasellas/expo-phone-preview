@@ -8,8 +8,8 @@
     "start": "node server.cjs",
     "desktop": "electron .",
     "dist:win": "electron-builder --win --dir",
-    "dist:win:installer": "electron-builder --win",
-    "dist:mac": "electron-builder --mac",
+    "dist:win:installer": "electron-builder --win --publish never",
+    "dist:mac": "electron-builder --mac --publish never",
     "test": "node --test test/*.test.mjs"
   },
   "keywords": [
