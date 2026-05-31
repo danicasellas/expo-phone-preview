@@ -1,6 +1,6 @@
 {
   "name": "expo-phone-preview",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tiny browser phone frame for previewing Expo Web apps from localhost.",
   "type": "module",
   "main": "electron/main.cjs",
@@ -9,7 +9,7 @@
     "desktop": "electron .",
     "dist:win": "electron-builder --win --dir",
     "dist:win:installer": "electron-builder --win --publish never",
-    "dist:mac": "electron-builder --mac --publish never",
+    "dist:mac": "electron-builder --mac --universal --publish never",
     "test": "node --test test/*.test.mjs"
   },
   "keywords": [

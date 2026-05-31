@@ -32,7 +32,7 @@ Code appear immediately.
 Use the files from GitHub Releases:
 
 - Windows: download the `.exe` installer or portable `.exe`.
-- macOS: download the `.dmg` or `.zip`.
+- macOS: download the universal `.dmg` or `.zip`.
 
 The desktop app does not require opening `http://localhost:4173`. It opens the
 phone preview directly.
@@ -102,8 +102,8 @@ Build macOS packages on macOS:
 npm run dist:mac
 ```
 
-The GitHub Actions workflow builds Windows and macOS packages from the public
-repo. Trigger it manually from the Actions tab, or push a tag like `v0.1.0` to
+The GitHub Actions workflow builds Windows and universal macOS packages from the
+public repo. Trigger it manually from the Actions tab, or push a tag like `v0.1.1` to
 attach the generated files to a GitHub Release. GitHub standard runners are free
 for public repositories, which keeps release builds low-cost.
 

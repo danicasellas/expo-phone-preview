@@ -13,7 +13,10 @@ describe("desktop package config", () => {
       packageJson.scripts["dist:win:installer"],
       "electron-builder --win --publish never"
     );
-    assert.equal(packageJson.scripts["dist:mac"], "electron-builder --mac --publish never");
+    assert.equal(
+      packageJson.scripts["dist:mac"],
+      "electron-builder --mac --universal --publish never"
+    );
   });
 
   it("packages the static preview and Electron shell for Windows and macOS", () => {
