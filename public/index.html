@@ -22,13 +22,13 @@
               name="preview-url"
               autocomplete="off"
               spellcheck="false"
-              placeholder="› Web: http://localhost:8081"
+              placeholder="Web: http://localhost:8081"
             />
             <button type="submit">Open</button>
           </div>
         </form>
 
-        <div class="devices" role="group" aria-label="Device size">
+        <div class="devices" role="group" aria-label="Device preset">
           <button type="button" class="device-button is-active" data-device="iphone">
             iPhone
           </button>
@@ -38,6 +38,19 @@
           <button type="button" class="device-button" data-device="tablet">
             Tablet
           </button>
+        </div>
+
+        <div class="scale-control" aria-label="Device scale">
+          <span class="scale-label">Device scale</span>
+          <div class="scale-row">
+            <button type="button" class="scale-button" id="device-scale-down" aria-label="Decrease device scale">
+              -
+            </button>
+            <span class="scale-value" id="device-scale-value" aria-live="polite">100%</span>
+            <button type="button" class="scale-button" id="device-scale-up" aria-label="Increase device scale">
+              +
+            </button>
+          </div>
         </div>
 
         <div class="actions">

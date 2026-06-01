@@ -130,6 +130,47 @@ button,
   grid-template-columns: 1fr 1fr;
 }
 
+.scale-control {
+  display: grid;
+  gap: 8px;
+}
+
+.scale-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.scale-row {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  gap: 8px;
+  align-items: center;
+}
+
+.scale-button {
+  padding: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.scale-button:disabled {
+  color: #aaa49a;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.scale-value {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  background: #fbfaf7;
+  font-weight: 800;
+}
+
 .status {
   margin: 0;
   color: var(--muted);
@@ -142,9 +183,12 @@ button,
   min-height: calc(100vh - 56px);
   display: grid;
   place-items: center;
+  overflow: auto;
+  padding: 48px;
 }
 
 .phone {
+  --device-scale: 1;
   width: min(390px, calc(100vw - 56px));
   height: min(844px, calc(100vh - 56px));
   max-height: 844px;
@@ -154,9 +198,12 @@ button,
   padding: 16px 0;
   position: relative;
   box-shadow: var(--shadow);
+  transform: scale(var(--device-scale));
+  transform-origin: center;
   transition:
     width 160ms ease,
-    height 160ms ease;
+    height 160ms ease,
+    transform 160ms ease;
 }
 
 .phone[data-device="android"] {
@@ -213,6 +260,7 @@ iframe {
   .stage {
     order: -1;
     min-height: auto;
+    padding: 16px;
   }
 
   .phone {

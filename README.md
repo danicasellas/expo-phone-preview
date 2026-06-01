@@ -20,6 +20,7 @@ Code appear immediately.
 - Works with Expo Web on `localhost`.
 - Accepts the full Expo line or a plain URL.
 - Includes iPhone, Android, and tablet frame sizes.
+- Lets you scale the phone frame up or down.
 - Has quick reload and open-in-tab actions.
 
 ## Requirements
